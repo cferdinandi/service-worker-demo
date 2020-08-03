@@ -17,9 +17,6 @@ addEventListener('fetch', function (event) {
 	// https://stackoverflow.com/a/49719964
 	if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') return;
 
-	// Ignore non-GET requests
-	if (request.method !== 'GET') return;
-
 	// HTML files
 	// Network-first
 	if (request.headers.get('Accept').includes('text/html')) {
